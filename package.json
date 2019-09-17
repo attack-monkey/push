@@ -1,0 +1,11 @@
+{
+  "name": "h",
+  "version": "1.0.0",
+  "description": "Micro frontend framework built for speed and purity",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "attack-monkey",
+  "license": "ISC"
+}
