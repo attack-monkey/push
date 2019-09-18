@@ -22,3 +22,10 @@ javaScript
 npx douglas get push-seed
 
 ```
+
+typeScript
+
+```
+npx douglas get push-seed-ts
+
+```
