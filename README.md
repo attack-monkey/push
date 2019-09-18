@@ -10,3 +10,14 @@ push comes with:
 - routing
 - redux-like state management
 - treeReduce re-rendering
+
+## install
+
+The easiest way to install is to create a new project directory and then install from a seed project
+
+javaScript
+
+```
+npx douglas get push-seed
+
+```
