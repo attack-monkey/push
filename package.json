@@ -1,6 +1,6 @@
 {
   "name": "push_fw",
-  "version": "2.0.0-beta.2",
+  "version": "2.0.0-beta.3",
   "description": "Micro frontend framework built for speed and purity",
   "main": "index.js",
   "scripts": {
