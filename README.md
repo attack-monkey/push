@@ -41,6 +41,13 @@ all side effects are handled by treeReduce - since it has to handle mutations to
 
 The easiest way to install is to create a new project directory and then install from a seed project
 
+typeScript
+
+```
+npx douglas get push-seed-ts
+
+```
+
 javaScript
 
 ```
@@ -48,9 +55,6 @@ npx douglas get push-seed
 
 ```
 
-typeScript
+## Docs
 
-```
-npx douglas get push-seed-ts
-
-```
+Docs - https://github.com/attack-monkey/push/wiki
