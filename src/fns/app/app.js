@@ -1,5 +1,5 @@
 import { replace } from '../replace/replace'
-import { returnRouteObject } from '../return-route-object/return-route-object'
+import { offsetRouteObject, returnRouteObject } from '../return-route-object/return-route-object'
 
 export let state, reducer, tree
 
@@ -12,7 +12,8 @@ const updateStateAndRender = (action) => {
   tree(oldState, state, action)
 }
 
-export const app = ($state, $component, $mount, $reducer, $tree) => {
+export const app = ($state, $component, $mount, $reducer, $tree, $options) => {
+  void (offsetRouteObject($options && $options.urlOffset))
   state = { ...$state, route: returnRouteObject() }
   reducer = $reducer
   tree = $tree

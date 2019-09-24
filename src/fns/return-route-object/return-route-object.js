@@ -1,3 +1,7 @@
+let urlOffset = 0
+
+export const offsetRouteObject = amount => urlOffset = amount
+
 const getSearchFromHash = hash => {
   const hashMatchArray = hash.match(/\?[^]*/)
   return hashMatchArray && Array.isArray(hashMatchArray) ? hashMatchArray[0] : undefined
@@ -27,6 +31,7 @@ export const returnRouteObject = () => {
   const lastKey = pathArrayStep1.length -1
   // if last path array item is '' then remove it
   const pathArrayStep2 = pathArrayStep1[lastKey] === '' ? pathArrayStep1.slice(0, lastKey) : pathArrayStep1
+  const pathArrayStep3 = pathArrayStep2.slice(urlOffset)
   const hashArrayStep1 = window.location.hash
   .replace(/\?[^]*/, '')
   .replace('#/', '')
@@ -35,7 +40,7 @@ export const returnRouteObject = () => {
     hashArrayStep1.length === 1 && hashArrayStep1[0] === ""
       ? []
       : hashArrayStep1
-  const segments = pathArrayStep2.concat(hashArrayStep2)
+  const segments = pathArrayStep3.concat(hashArrayStep2)
   return {
     segments,
     queryString: queryString()
